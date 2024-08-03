@@ -1,0 +1,128 @@
+[
+  {
+    "sku": 43264,
+    "name": "L'Oréal Professionnel Expert Absolut Repair Cortex Lipidium - Máscara de Reconstrução 500g",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "SP",
+          "quantity": 12,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "MOEMA",
+          "quantity": 3,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43265,
+    "name": "L'Oréal Professionnel Expert Vitamino Color - Máscara de Tratamento 500g",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "RJ",
+          "quantity": 10,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "BOTAFOGO",
+          "quantity": 10,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43266,
+    "name": "L'Oréal Professionnel Expert Nutrifier - Máscara de Nutrição 500g",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "SP",
+          "quantity": 5,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "PINHEIROS",
+          "quantity": 3,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43267,
+    "name": "L'Oréal Professionnel Expert Absolut Repair Cortex Lipidium - Shampoo 300ml",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "SP",
+          "quantity": 15,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "MOEMA",
+          "quantity": 10,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43268,
+    "name": "L'Oréal Professionnel Expert Vitamino Color - Condicionador 300ml",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "RJ",
+          "quantity": 20,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "COPACABANA",
+          "quantity": 10,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43269,
+    "name": "L'Oréal Professionnel Expert Nutrifier - Shampoo 300ml",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "SP",
+          "quantity": 7,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "VILA MARIANA",
+          "quantity": 3,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  },
+  {
+    "sku": 43270,
+    "name": "L'Oréal Professionnel Expert Inforcer - Máscara de Fortalecimento 500g",
+    "inventory": {
+      "warehouses": [
+        {
+          "locality": "MG",
+          "quantity": 0,
+          "type": "ECOMMERCE"
+        },
+        {
+          "locality": "BELO HORIZONTE",
+          "quantity": 0,
+          "type": "PHYSICAL_STORE"
+        }
+      ]
+    }
+  }
+]
