@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping(value = "/product")
 public class ProductController {
@@ -16,29 +14,21 @@ public class ProductController {
 
     @GetMapping("/{sku}")
     public ResponseEntity<Product> getProduct(@PathVariable Long sku) {
-        Optional<Product> product = productService.getProductBySku(sku);
-        return product.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        return ResponseEntity.ok(productService.getProductBySku(sku));
     }
 
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
+    public Product createProduct(@RequestBody Product product) throws Exception {
         return productService.createProduct(product);
     }
 
     @PutMapping("/{sku}")
     public ResponseEntity<Product> updateProduct(@PathVariable Long sku, @RequestBody Product product) {
-        if (!productService.getProductBySku(sku).isPresent()) {
-            return ResponseEntity.notFound().build();
-        }
-        product.setSku(sku);
         return ResponseEntity.ok(productService.updateProduct(product));
     }
 
     @DeleteMapping("/{sku}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long sku) {
-        if (!productService.getProductBySku(sku).isPresent()) {
-            return ResponseEntity.notFound().build();
-        }
         productService.deleteProductBySku(sku);
         return ResponseEntity.noContent().build();
     }
