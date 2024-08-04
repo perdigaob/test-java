@@ -77,3 +77,76 @@ Crie endpoints para as seguintes ações:
 - Não é necessário adicionar swagger (não será avaliado)
 - Sinta-se a vontade para fazer o código em ```groovy```, ```kotlin``` ou ```scala``` se preferir, utilizamos bastante aqui
 - Testes são sempre bem-vindos :smiley:
+
+---
+
+### Endpoints disponíveis
+
+#### GET /product/{sku}
+
+Busca um produto por SKU.
+
+`curl --location 'http://localhost:8080/product/12345'`
+
+#### POST /product
+
+Adiciona um produto.
+
+``
+curl --location 'http://localhost:8080/product' \
+--header 'Content-Type: application/json' \
+--data '{
+"sku": 12346,
+"name": "teste",
+"inventory": {
+"warehouses": [
+{
+"locality": "teste",
+"quantity": 6,
+"type": "ECOMMERCE"
+}
+]
+}
+}'
+``
+
+#### PUT /product/{sku}
+
+Atualiza um produto existente, buscando por SKU.
+
+``
+curl --location --request PUT 'http://localhost:8080/product/12345' \
+--header 'Content-Type: application/json' \
+--data '{
+"sku": 12345,
+"name": "Produto Teste",
+"inventory": {
+"warehouses": [
+{
+"locality": "teste01",
+"quantity": 3,
+"type": "ECOMMERCE"
+},
+{
+"locality": "teste01",
+"quantity": 5,
+"type": "ECOMMERCE"
+}
+]
+}
+}'
+``
+
+#### DELETE /product/{sku}
+
+Deleta um produto existente, buscando por SKU.
+
+`curl --location --request DELETE 'http://localhost:8080/product/12345'`
+
+---
+
+### Observações
+
+- O programa começa com uma lista de produtos carregada a partir de um arquivo JSON. Os SKUs dos produtos disponíveis
+  variam de 43264 a 43270, sendo que o produto com SKU 43270 possui inventário zerado.
+- Optei por adicionar testes apenas para o controller, para não exceder o tempo sugerido nas instruções.
